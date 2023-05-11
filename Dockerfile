@@ -1,11 +1,11 @@
 // build the image
-docker build -t first-dockerfile -f Dockerfile1 .
+docker build -t first-dockerfile -f OlaUnicamp.java
 
 // list image
 docker images
 
 // run the image
-docker run -it -d olaunicamp
+docker run -it -d openjdk
 
 // use exec for interaction
-docker exec -it d833a10812ed bash
+docker exec -it a6de6da8040c bash
