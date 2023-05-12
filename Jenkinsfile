@@ -1,18 +1,22 @@
 pipeline {
-    agent {label "linux"} 
+    agent { label "linux" } 
     stages {
-        stage('build') {
+        stage("build") {
             steps {
                 // Get some code from a GitHub repository
                 //git 'https://github.com/alexandreoliva/inf335_Trabalho5.2.git/'                
-                sh "docker build -t olaunicamp ."               
+                sh """
+                docker build -t olaunicamp .
+                """               
             }            
         }
-         stage('run') {
+         stage("run") {
             steps {
                 // Get some code from a GitHub repository
                 //git 'https://github.com/alexandreoliva/inf335_Trabalho5.2.git/'                
-                sh "docker run --rm olaunicamp"               
+                sh """
+                docker run --rm olaunicamp
+                """               
             }            
         }
     }
