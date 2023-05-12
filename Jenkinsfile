@@ -5,14 +5,14 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 //git 'https://github.com/alexandreoliva/inf335_Trabalho5.2.git/'                
-                sh "docker build -t OlaUnicamp ."               
+                sh "docker build -t Olaunicamp ."               
             }            
         }
          stage('run') {
             steps {
                 // Get some code from a GitHub repository
                 //git 'https://github.com/alexandreoliva/inf335_Trabalho5.2.git/'                
-                sh "docker run --rm OlaUnicamp"               
+                sh "docker run --rm Olaunicamp"               
             }            
         }
     }
